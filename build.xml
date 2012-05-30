@@ -68,22 +68,18 @@
         </junit>
     </target>
 
-    <target name="-load.short.rev">
-        <exec executable="git" outputproperty="short_rev">
-            <arg line="describe --always"/>
-        </exec>
-    </target>
-
-    <target name="pkg" depends="compile, -load.short.rev">
-        <property name="basename" value="Sample_App-${short_rev}"/>
-        <property name="jar.path" value="${pkg.dir}/${basename}.jar"/>
+    <target name="pkg" depends="compile">
+        <property name="basename" value="sample_app"/>
         <property name="war.path" value="${pkg.dir}/${basename}.war"/>
         <war destfile="${war.path}" webxml="${web.inf.path}/web.xml">
             <lib dir="${lib.dir}/spring" includes="*.jar" />
             <lib dir="${lib.dir}/hibernate" includes="*.jar" />
             <lib dir="${lib.dir}/logging" includes="*.jar" />
+            <lib dir="${lib.dir}/velocity" includes="*.jar" />
+            <lib dir="${lib.dir}/commons" includes="*.jar" />
             <classes dir="${classes.dir}" includes="**" />
             <webinf dir="${web.inf.path}" includes="**" />
+            <webinf dir="${web.path}" includes="*.jsp" />
             <metainf dir="${meta.inf.path}" includes="**" />
         </war>
     </target>

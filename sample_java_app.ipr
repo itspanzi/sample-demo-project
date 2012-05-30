@@ -216,9 +216,12 @@
       <jarDirectory url="file://$PROJECT_DIR$/lib/hibernate" recursive="false" />
     </library>
     <library name="logging">
-      <CLASSES />
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/lib/logging" />
+      </CLASSES>
       <JAVADOC />
       <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/lib/logging" recursive="false" />
     </library>
     <library name="servlets">
       <CLASSES>
@@ -234,14 +237,18 @@
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/modules/jdbc-pool/src/main/java" />
-        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/java" />
-        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/modules/jdbc-pool/src/test/java" />
-        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/test" />
-        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/webapps/docs/appdev/sample/src" />
-        <root url="jar://$PROJECT_DIR$/../go/cruise/localivy/spring/spring-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/lib_sources/spring-webmvc-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/lib_sources/spring-sources.jar!/" />
       </SOURCES>
       <jarDirectory url="file://$PROJECT_DIR$/lib/spring" recursive="false" />
+    </library>
+    <library name="velocity">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/lib/velocity" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/lib/velocity" recursive="false" />
     </library>
   </component>
 </project>
