@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
-<project name="SimpleJavaApp" basedir="." default="pkg">
+<project name="SampleJavaApp" basedir="." default="pkg">
     <property name="src.dir" location="${basedir}/src"/>
     <property name="test.dir" location="${basedir}/test"/>
     <property name="lib.dir" location="${basedir}/lib"/>
     <property name="web.path" value="${basedir}/web"/>
     <property name="web.inf.path" value="${basedir}/web/WEB-INF"/>
+    <property name="meta.inf.path" value="${basedir}/META-INF"/>
     <property name="test.lib.dir" location="${basedir}/test-lib"/>
     <property name="target.dir" location="${basedir}/target"/>
     <property name="classes.dir" location="${target.dir}/classes"/>
     <property name="test.classes.dir" location="${target.dir}/test-classes"/>
     <property name="test.reports.dir" location="${target.dir}/reports"/>
     <property name="pkg.dir" location="${target.dir}/pkg"/>
+    <property name="tomcat.path" location="/home/pavan/projects/apache-tomcat-7.0.27"/>
+    <property name="tomcat.webapps.path" location="${tomcat.path}/webapps"/>
 
     <path id="dependencies">
         <fileset dir="${lib.dir}" includes="**/*.jar" id="dependencies.fileset"/>
@@ -72,16 +75,28 @@
     </target>
 
     <target name="pkg" depends="compile, -load.short.rev">
-        <property name="basename" value="simple-${short_rev}"/>
+        <property name="basename" value="Sample_App-${short_rev}"/>
         <property name="jar.path" value="${pkg.dir}/${basename}.jar"/>
         <property name="war.path" value="${pkg.dir}/${basename}.war"/>
-        <jar destfile="${jar.path}">
-            <fileset dir="${classes.dir}"/>
-        </jar>
         <war destfile="${war.path}" webxml="${web.inf.path}/web.xml">
-            <webinf dir="${web.inf.path}"/>
-            <lib includes="${lib.dir}/**/*.jar" />
-            <classes dir="${classes.dir}" />
+            <lib dir="${lib.dir}/spring" includes="*.jar" />
+            <lib dir="${lib.dir}/hibernate" includes="*.jar" />
+            <lib dir="${lib.dir}/logging" includes="*.jar" />
+            <classes dir="${classes.dir}" includes="**" />
+            <webinf dir="${web.inf.path}" includes="**" />
+            <metainf dir="${meta.inf.path}" includes="**" />
         </war>
+    </target>
+
+    <target name="deploy" depends="pkg">
+        <exec command="/bin/bash" dir="${tomcat.path}" failonerror="false">
+            <arg value="bin/shutdown.sh"/>
+        </exec>
+        <delete dir="${tomcat.webapps.path}/${basename}"/>
+        <delete file="${tomcat.webapps.path}/${basename}.war"/>
+        <copy file="${war.path}" todir="${tomcat.webapps.path}" />
+        <exec command="/bin/bash" dir="${tomcat.path}">
+            <arg value="bin/startup.sh" />
+        </exec>
     </target>
 </project>

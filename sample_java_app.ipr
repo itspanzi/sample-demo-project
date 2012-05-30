@@ -203,7 +203,7 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
@@ -220,12 +220,27 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="servlets">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/lib/servlets" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/lib/servlets" recursive="false" />
+    </library>
     <library name="spring">
       <CLASSES>
         <root url="file://$PROJECT_DIR$/lib/spring" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/modules/jdbc-pool/src/main/java" />
+        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/java" />
+        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/modules/jdbc-pool/src/test/java" />
+        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/test" />
+        <root url="file://$PROJECT_DIR$/../apache-tomcat-7.0.27/src/apache-tomcat-7.0.27-src/webapps/docs/appdev/sample/src" />
+        <root url="jar://$PROJECT_DIR$/../go/cruise/localivy/spring/spring-sources.jar!/" />
+      </SOURCES>
       <jarDirectory url="file://$PROJECT_DIR$/lib/spring" recursive="false" />
     </library>
   </component>
