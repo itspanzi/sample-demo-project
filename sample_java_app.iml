@@ -44,6 +44,7 @@
     <orderEntry type="library" name="hibernate" level="project" />
     <orderEntry type="library" name="servlets" level="project" />
     <orderEntry type="library" name="velocity" level="project" />
+    <orderEntry type="library" name="h2" level="project" />
   </component>
 </module>
 
