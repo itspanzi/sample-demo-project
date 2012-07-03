@@ -1,0 +1,22 @@
+<h2>All users in the system</h2>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+            #foreach ( $user in $users )
+            <tr>
+                <td>$user.name</td>
+                <td>$user.age</td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>
+<div>
+    <a href="users/new">Add New User</a>
+</div>

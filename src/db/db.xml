@@ -13,9 +13,12 @@
     <condition property="db.port" value="${env.DB_PORT}" else="9092">
         <isset property="env.DB_PORT"/>
     </condition>
+    <condition property="db.path" value="${env.DB_PATH}" else="db">
+        <isset property="env.DB_PORT"/>
+    </condition>
 
     <property name="db.name" value="sample" />
-    <property name="db.url" value="jdbc:h2:tcp://${db.host}:${db.port}/${db.name}" />
+    <property name="db.url" value="jdbc:h2:tcp://${db.host}:${db.port}/${db.path}/${db.name}" />
 
     <property name="db.dba.user" value="sa" />
     <property name="db.dba.user_password" value="" />

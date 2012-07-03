@@ -14,35 +14,42 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
-public class UserController {
+public class UsersController {
 
     private UserRepository userRepository;
 
     @Autowired
-    public UserController(UserRepository userRepository) {
+    public UsersController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping(value = "/users/new", method = RequestMethod.GET)
-    public ModelAndView newUser(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public ModelAndView allUsers(HttpServletRequest request) {
         Map model = new HashMap();
         HttpSession session = request.getSession(false);
         if (session != null) {
             model.put("message", session.getAttribute("flash"));
             session.removeAttribute("flash");
         }
-        return new ModelAndView("user/new", model);
+        model.put("users", userRepository.allUsers());
+        return new ModelAndView("users/index", model);
+    }
+
+    @RequestMapping(value = "/users/new", method = RequestMethod.GET)
+    public ModelAndView newUser() {
+        return new ModelAndView("users/new", new HashMap());
     }
 
     @RequestMapping(value = "/users/create", method = RequestMethod.POST)
     public ModelAndView createUser(@RequestParam("name") String name,
                                    @RequestParam("age") String age,
-                                   HttpServletRequest request, HttpServletResponse response) {
+                                   HttpServletRequest request) {
         userRepository.save(new User(name, Integer.parseInt(age)));
         request.getSession(true).setAttribute("flash", "User created successfully");
-        return new ModelAndView(new RedirectView("/users/new", true));
+        return new ModelAndView(new RedirectView("/users", true));
     }
 }
