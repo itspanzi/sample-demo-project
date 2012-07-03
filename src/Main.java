@@ -13,7 +13,7 @@ public class Main {
     static {
         try {
             ourSessionFactory = new AnnotationConfiguration().
-                    configure("hibernate.cfg.xml").
+                    configure("WEB-INF/hibernate.cfg.xml").
                     buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);

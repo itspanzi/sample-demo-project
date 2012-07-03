@@ -207,6 +207,22 @@
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
+    <library name="commons">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/lib/commons" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/lib/commons" recursive="false" />
+    </library>
+    <library name="dbdeploy">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/lib/dbdeploy" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/lib/dbdeploy" recursive="false" />
+    </library>
     <library name="h2">
       <CLASSES>
         <root url="file://$PROJECT_DIR$/lib/h2" />

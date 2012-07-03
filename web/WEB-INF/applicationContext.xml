@@ -3,4 +3,23 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="configLocation" value="/WEB-INF/hibernate/hibernate.cfg.xml"/>
+        <property name="useTransactionAwareDataSource" value="true"/>
+        <property name="mappingResources">
+            <list>
+                <value>db/hibernate-mappings/User.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.H2Dialect
+                hibernate.show_sql=false
+            </value>
+        </property>
+    </bean>
+
+    <bean class="com.thoughtworks.go.sample.persistance.UserRepository" name="userRepository" lazy-init="true">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
 </beans>

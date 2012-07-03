@@ -3,8 +3,11 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
+        <datasource-map>
+          <unit-entry name="sessionFactory" />
+          <unit-entry name="web:WEB-INF:hibernate:hibernate.cfg.xml" />
+        </datasource-map>
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/web/WEB-INF/hibernate/hibernate.cfg.xml" />
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -45,6 +48,8 @@
     <orderEntry type="library" name="servlets" level="project" />
     <orderEntry type="library" name="velocity" level="project" />
     <orderEntry type="library" name="h2" level="project" />
+    <orderEntry type="library" name="commons" level="project" />
+    <orderEntry type="library" name="dbdeploy" level="project" />
   </component>
 </module>
 
