@@ -17,6 +17,6 @@ public class UserRepository extends HibernateDaoSupport {
     }
 
     public List<User> allUsers() {
-        return getHibernateTemplate().find("from User");
+        return getHibernateTemplate().find("from Users");
     }
 }

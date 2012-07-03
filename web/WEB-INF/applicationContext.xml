@@ -8,7 +8,7 @@
         <property name="useTransactionAwareDataSource" value="true"/>
         <property name="mappingResources">
             <list>
-                <value>db/hibernate-mappings/User.hbm.xml</value>
+                <value>db/hibernate-mappings/Users.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
