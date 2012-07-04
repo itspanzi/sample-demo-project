@@ -1,4 +1,4 @@
 out
 target
-**/generated/**
+src/db/migrate/generated
 sample_java_app.iws
