@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="SampleJavaApp" basedir="." default="pkg">
+<project name="SampleJavaApp" basedir="../" default="pkg">
     <property name="src.dir" location="${basedir}/src"/>
     <property name="test.dir" location="${basedir}/test"/>
     <property name="lib.dir" location="${basedir}/lib"/>
@@ -68,7 +68,7 @@
         </junit>
     </target>
 
-    <target name="pkg" depends="compile">
+    <target name="pkg-for-ci">
         <property name="basename" value="sample_app"/>
         <property name="war.path" value="${pkg.dir}/${basename}.war"/>
         <war destfile="${war.path}" webxml="${web.inf.path}/web.xml">
@@ -86,15 +86,5 @@
         </war>
     </target>
 
-    <target name="deploy" depends="pkg">
-        <exec command="/bin/bash" dir="${tomcat.path}" failonerror="false">
-            <arg value="bin/shutdown.sh"/>
-        </exec>
-        <delete dir="${tomcat.webapps.path}/${basename}"/>
-        <delete file="${tomcat.webapps.path}/${basename}.war"/>
-        <copy file="${war.path}" todir="${tomcat.webapps.path}" />
-        <exec command="/bin/bash" dir="${tomcat.path}">
-            <arg value="bin/startup.sh" />
-        </exec>
-    </target>
+    <target name="pkg" depends="compile, pkg-for-ci" />
 </project>

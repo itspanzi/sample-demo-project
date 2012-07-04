@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="manage-tomcat" basedir="..">
+    <property name="lib.dir" location="${basedir}/lib"/>
+
+    <path id="tomcat">
+        <fileset dir="${lib.dir}/tomcat" includes="*.jar"/>
+    </path>
+
+    <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask" classpathref="tomcat"/>
+    <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask" classpathref="tomcat"/>
+</project>

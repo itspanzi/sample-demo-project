@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c6e70da-d29b-4160-8efb-8b1136f66423" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/db/hibernate-mappings/User.hbm.xml" afterPath="$PROJECT_DIR$/src/db/hibernate-mappings/Users.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tomcat/catalina-ant.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tomcat/tomcat-coyote.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tomcat/tomcat-juli.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/deploy.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tomcat-build.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build/build.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/db/hibernate-mappings/Users.hbm.xml" afterPath="$PROJECT_DIR$/src/db/hibernate-mappings/User.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_java_app.iws" afterPath="$PROJECT_DIR$/sample_java_app.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/UserRepository.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/UserRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
     </list>
@@ -107,7 +114,7 @@
       <file leaf-file-name="UserRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="54" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+            <state line="19" column="53" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,10 +122,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Users.hbm.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/db/hibernate-mappings/Users.hbm.xml">
+      <file leaf-file-name="User.hbm.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/hibernate-mappings/User.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="0.13513513">
+            <state line="12" column="20" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="43" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="98" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.6486486">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/deploy.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="79" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tomcat-build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/tomcat-build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="19" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,14 +182,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/SampleSessionFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/DbDeployMigration.java" />
-        <option value="$PROJECT_DIR$/src/hibernate-mappings/User.hbm.xml" />
         <option value="$PROJECT_DIR$/src/db/migrate/deltas/1_create_base_tables.sql" />
         <option value="$PROJECT_DIR$/db.xml" />
         <option value="$PROJECT_DIR$/src/db/migrate/schema/create_schema.sql" />
         <option value="$PROJECT_DIR$/src/db/migrate/schema/createSchemaVersionTable.hsql.sql" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/com/thoughtworks/go/sample/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/com/thoughtworks/go/sample/controllers/UsersController.java" />
@@ -154,7 +193,11 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/vm/users/index.vm" />
         <option value="$PROJECT_DIR$/src/db/db.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/build/tomcat-build.xml" />
+        <option value="$PROJECT_DIR$/build/deploy.xml" />
         <option value="$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/UserRepository.java" />
+        <option value="$PROJECT_DIR$/build/build.xml" />
       </list>
     </option>
   </component>
@@ -205,20 +248,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,47 +315,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_java_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_java_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_java_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -531,7 +534,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1919" height="1022" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="129" width="1719" height="822" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,7 +552,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1734694" sideWeight="0.6708861" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1734694" sideWeight="0.6708861" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -605,27 +608,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="42" selection-start="2803" selection-end="2803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/vm/users/new.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/vm/users/edit.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/go/sample/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="29" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
@@ -703,23 +685,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="15" selection-start="26" selection-end="26" vertical-scroll-proportion="0.054054055">
+        <state line="3" column="43" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/tomcat-build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/hibernate-mappings/User.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/go/sample/persistance/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="54" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+        <state line="19" column="53" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/hibernate-mappings/Users.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/build/deploy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="0.13513513">
+        <state line="9" column="79" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="98" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.6486486">
           <folding />
         </state>
       </provider>

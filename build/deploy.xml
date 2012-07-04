@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="SampleJavaApp" basedir=".." default="deploy">
+
+    <include file="tomcat-build.xml"/>
+
+    <property environment="env"/>
+
+    <condition property="tomcat.manager.url" value="${env.TOMCAT_MANAGER_URL}" else="http://localhost:8080/manager/text">
+        <isset property="env.TOMCAT_MANAGER_URL"/>
+    </condition>
+
+    <condition property="tomcat.manager.username" value="${env.TOMCAT_MANAGER_USERNAME}" else="admin">
+        <isset property="env.TOMCAT_MANAGER_USERNAME"/>
+    </condition>
+
+    <condition property="tomcat.manager.password" value="${env.TOMCAT_MANAGER_PASSWORD}" else="password">
+        <isset property="env.TOMCAT_MANAGER_PASSWORD"/>
+    </condition>
+
+    <condition property="tomcat.context.path" value="${env.TOMCAT_CONTEXT_PATH}" else="/sample_app">
+        <isset property="env.TOMCAT_CONTEXT_PATH"/>
+    </condition>
+
+    <property name="target.dir" location="${basedir}/target"/>
+    <property name="pkg.dir" location="${target.dir}/pkg"/>
+    <property name="basename" value="sample_app"/>
+    <property name="war.path" value="${pkg.dir}/${basename}.war"/>
+
+    <target name="deploy" description="Install web application">
+        <deploy url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}" path="${tomcat.context.path}" war="file://${war.path}"/>
+    </target>
+
+    <target name="undeploy" description="Remove web application">
+        <undeploy url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}" path="${tomcat.context.path}" />
+    </target>
+</project>
