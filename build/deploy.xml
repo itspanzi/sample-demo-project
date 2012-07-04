@@ -1,7 +1,15 @@
 <?xml version="1.0"?>
-<project name="SampleJavaApp" basedir=".." default="deploy">
+<project name="SampleJavaApp-Deploy" basedir=".." default="deploy">
 
-    <include file="tomcat-build.xml"/>
+    <property name="lib.dir" location="${basedir}/lib"/>
+
+    <path id="tomcat">
+        <fileset dir="${lib.dir}/tomcat" includes="*.jar"/>
+    </path>
+
+    <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask" classpathref="tomcat"/>
+    <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask" classpathref="tomcat"/>
+
 
     <property environment="env"/>
 
@@ -31,6 +39,6 @@
     </target>
 
     <target name="undeploy" description="Remove web application">
-        <undeploy url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}" path="${tomcat.context.path}" />
+        <undeploy url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}" path="${tomcat.context.path}" failonerror="false" />
     </target>
 </project>
