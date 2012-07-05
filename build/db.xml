@@ -53,8 +53,8 @@
     </target>
 
     <target name="build-db-baseline">
-        <exec_sql src="${sql.schema.dir}/create_schema.sql" />
-        <exec_sql src="${sql.schema.dir}/createSchemaVersionTable.hsql.sql" onerror="continue" />
+        <exec_sql src="${sql.schema.dir}/cleaupDatabase.sql" onerror="continue"/>
+        <exec_sql src="${sql.schema.dir}/createVersionTables.sql" onerror="continue" />
     </target>
 
     <target name="execute-delta-script">
