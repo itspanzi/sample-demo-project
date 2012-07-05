@@ -1,0 +1,26 @@
+<h2>All Books</h2>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Publisher</th>
+        </tr>
+        </thead>
+        <tbody>
+            #foreach ( $book in $books )
+            <tr>
+                <td>$book.isbn</td>
+                <td>$book.name</td>
+                <td>$book.author</td>
+                <td>$book.publisher</td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>
+<div>
+    <a href="books/new">Add New Book</a>
+</div>

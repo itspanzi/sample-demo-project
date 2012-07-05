@@ -34,11 +34,11 @@
     </condition>
 
 
-    <property name="tomcat.manager.url" location="http://${tomcat.manager.host}:${tomcat.manager.port}/manager/text"/>
+    <property name="tomcat.manager.url" value="http://${tomcat.manager.host}:${tomcat.manager.port}/manager/text"/>
     <property name="target.dir" location="${basedir}/target"/>
     <property name="pkg.dir" location="${target.dir}/pkg"/>
     <property name="basename" value="sample_app"/>
-    <property name="war.path" value="${pkg.dir}/${basename}.war"/>
+    <property name="war.path" location="${pkg.dir}/${basename}.war"/>
 
     <target name="deploy" description="Install web application">
         <deploy url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}" path="${tomcat.context.path}" war="file://${war.path}"/>

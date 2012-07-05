@@ -3,11 +3,13 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-access="field" default-lazy="false">
-    <class name="com.thoughtworks.go.sample.models.User" table="users" >
+    <class name="com.thoughtworks.go.sample.models.Book" table="books" >
         <id name="id" column="id">
             <generator class="native"/>
         </id>
-        <property name="age"/>
+        <property name="isbn"/>
         <property name="name"/>
+        <property name="author"/>
+        <property name="publisher"/>
     </class>
 </hibernate-mapping>

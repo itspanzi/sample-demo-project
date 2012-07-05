@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <title>Create Book</title>
+    </head>
+    <body>
+        #if ($message)
+            <div>$message</div>
+        #end
+        <h1>Add new book</h1>
+        <form action="$req.getContextPath()/books/create" method="post">
+            <div>
+              <label for="book_isbn">ISBN:</label>
+              <input id="book_isbn" type="text" name="isbn" value="" />
+            </div>
+            <div>
+              <label for="book_name">Name:</label>
+              <input id="book_name" type="text" name="name" value="" />
+            </div>
+            <div>
+              <label for="book_author">Author:</label>
+              <input id="book_author" type="text" name="author" value="" />
+            </div>
+            <div>
+              <label for="book_publisher">Publisher:</label>
+              <input id="book_publisher" type="text" name="publisher" value="" />
+            </div>
+            <div>
+              <input type="submit" value="Submit"/>
+              <input type="reset" value="Reset"/>
+            </div>
+        </form>
+    </body>
+</html>

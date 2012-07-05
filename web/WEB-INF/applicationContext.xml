@@ -8,7 +8,7 @@
         <property name="useTransactionAwareDataSource" value="true"/>
         <property name="mappingResources">
             <list>
-                <value>db/hibernate-mappings/User.hbm.xml</value>
+                <value>db/hibernate-mappings/Book.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -19,7 +19,7 @@
         </property>
     </bean>
 
-    <bean class="com.thoughtworks.go.sample.persistance.UserRepository" name="userRepository" lazy-init="true">
+    <bean class="com.thoughtworks.go.sample.persistance.BooksRepository" name="booksRepository" lazy-init="true">
         <constructor-arg index="0" ref="sessionFactory"/>
     </bean>
 </beans>
