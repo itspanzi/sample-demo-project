@@ -13,7 +13,11 @@
 
     <property environment="env"/>
 
-    <condition property="tomcat.manager.url" value="${env.TOMCAT_MANAGER_URL}" else="http://localhost:8080/manager/text">
+    <condition property="tomcat.manager.host" value="${env.TOMCAT_MANAGER_HOST}" else="localhost">
+        <isset property="env.TOMCAT_MANAGER_URL"/>
+    </condition>
+
+    <condition property="tomcat.manager.port" value="${env.TOMCAT_MANAGER_PORT}" else="8080">
         <isset property="env.TOMCAT_MANAGER_URL"/>
     </condition>
 
@@ -29,6 +33,8 @@
         <isset property="env.TOMCAT_CONTEXT_PATH"/>
     </condition>
 
+
+    <property name="tomcat.manager.url" location="http://${tomcat.manager.host}:${tomcat.manager.port}/manager/text"/>
     <property name="target.dir" location="${basedir}/target"/>
     <property name="pkg.dir" location="${target.dir}/pkg"/>
     <property name="basename" value="sample_app"/>
